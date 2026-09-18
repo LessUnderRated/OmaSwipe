@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "omaswipe",
+  "name": "Omaswipe",
+  "version": "1.0.0",
+  "author": "LessUnderRated",
+  "license": "MIT",
+  "description": "Omaswipe is a Omarchy plugin that allows you to 3-finger swipe with compatible macs between your Omarchy workspaces. Incidentally this also by default enables you to change the themes and backgrounds of all workspaces individually. Enjoy.",
+  "kinds": ["service"],
+  "keepLoaded": true,
+  "entryPoints": {
+    "service": "Service.qml"
+  }
+}

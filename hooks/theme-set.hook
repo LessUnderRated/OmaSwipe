@@ -1,0 +1,4 @@
+#!/bin/bash
+# Managed by omaswipe. Re-applies per-workspace terminal colors
+# after a global theme change so windows stay pinned to their workspace look.
+exec python3 "$HOME/.config/omarchy/plugins/omaswipe/assets.py" sync-windows --force
