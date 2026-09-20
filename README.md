@@ -25,6 +25,6 @@ Assignments are saved in `~/.config/omarchy/omaswipe.json`.
 ## Remove
 
 ```sh
-omarchy plugin remove omaswipe
+omarchy plugin remove lessunderrated.omaswipe
 ```
 

@@ -22,11 +22,11 @@ Item {
   property var pluginRegistry: null
 
   readonly property string home: Quickshell.env("HOME")
-  readonly property string pluginDir: home + "/.config/omarchy/plugins/omaswipe"
+  readonly property string pluginDir: home + "/.config/omarchy/plugins/lessunderrated.omaswipe"
   readonly property string configPath: home + "/.config/omarchy/omaswipe.json"
   readonly property string currentBackgroundLink: home + "/.local/state/omarchy/current/background"
   readonly property string currentThemeNamePath: home + "/.local/state/omarchy/current/theme.name"
-  readonly property string manifestId: manifest && manifest.id ? manifest.id : "omaswipe"
+  readonly property string manifestId: manifest && manifest.id ? manifest.id : "lessunderrated.omaswipe"
 
   property var config: Model.emptyConfig()
   property var themes: []
@@ -38,7 +38,7 @@ Item {
   property bool stripReady: false
   property bool tearingDown: false
   property bool wasEnabled: false
-  readonly property string uninstallScript: home + "/.config/hypr/omaswipe.uninstall.py"
+  readonly property string uninstallScript: home + "/.config/hypr/lessunderrated.omaswipe.uninstall.py"
 
   function teardownRuntime() {
     if (root.tearingDown) return
@@ -625,7 +625,7 @@ Item {
   Process { id: linkProc }
 
   IpcHandler {
-    target: "omaswipe"
+    target: "lessunderrated.omaswipe"
 
     function ping(): string { return "ok" }
 

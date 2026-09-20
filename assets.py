@@ -12,7 +12,7 @@ HOME = os.environ.get("HOME", "")
 XDG_CONFIG = os.environ.get("XDG_CONFIG_HOME") or os.path.join(HOME, ".config")
 OMARCHY = os.environ.get("OMARCHY_PATH", "/usr/share/omarchy")
 PLUGIN_DIR = os.path.dirname(os.path.realpath(__file__))
-PLUGIN_ID = "omaswipe"
+PLUGIN_ID = "lessunderrated.omaswipe"
 HYPR_PLUGIN_NAME = "omaswipe-ws-offset"
 HYPR_PLUGIN_SO = os.path.join(XDG_CONFIG, "hypr", "plugins", f"{HYPR_PLUGIN_NAME}.so")
 HYPR_SNIPPET = os.path.join(XDG_CONFIG, "hypr", f"{PLUGIN_ID}.lua")
@@ -806,7 +806,7 @@ def ensure_hyprland_snippet_loaded():
     if hyprland_lua_already_loads_helper():
         return True
     path = os.path.join(XDG_CONFIG, "hypr", "hyprland.lua")
-    line = 'pcall(dofile, (os.getenv("HOME") or "") .. "/.config/hypr/omaswipe.lua")\n'
+    line = 'pcall(dofile, (os.getenv("HOME") or "") .. "/.config/hypr/lessunderrated.omaswipe.lua")\n'
     marker = "-- omaswipe helper (permission, load, wallpaper layer)"
     try:
         existing = open(path, encoding="utf-8").read() if os.path.isfile(path) else ""

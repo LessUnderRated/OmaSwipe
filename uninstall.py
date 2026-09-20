@@ -11,14 +11,14 @@ import sys
 
 HOME = os.environ.get("HOME", "")
 XDG_CONFIG = os.environ.get("XDG_CONFIG_HOME") or os.path.join(HOME, ".config")
-PLUGIN_ID = "omaswipe"
+PLUGIN_ID = "lessunderrated.omaswipe"
 HYPR_PLUGIN_SO = os.path.join(XDG_CONFIG, "hypr", "plugins", "omaswipe-ws-offset.so")
 HYPR_SNIPPET = os.path.join(XDG_CONFIG, "hypr", f"{PLUGIN_ID}.lua")
 UNINSTALL_DST = os.path.join(XDG_CONFIG, "hypr", f"{PLUGIN_ID}.uninstall.py")
 THEME_HOOK_DST = os.path.join(XDG_CONFIG, "omarchy", "hooks", "theme-set.d", f"{PLUGIN_ID}.hook")
 HYPRLAND_LUA = os.path.join(XDG_CONFIG, "hypr", "hyprland.lua")
 MARKER = "-- omaswipe helper (permission, load, wallpaper layer)"
-DOFILE = 'pcall(dofile, (os.getenv("HOME") or "") .. "/.config/hypr/omaswipe.lua")'
+DOFILE = 'pcall(dofile, (os.getenv("HOME") or "") .. "/.config/hypr/lessunderrated.omaswipe.lua")'
 UNSET_GESTURE = (
     "_G.__omaswipe_ws_swipe = nil _G.__omaswipe_ws_persist = nil "
     'pcall(function() hl.gesture({ fingers = 3, direction = "horizontal", action = "unset" }) end)'
